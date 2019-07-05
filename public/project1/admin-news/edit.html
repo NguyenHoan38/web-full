@@ -1,0 +1,949 @@
+
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <title>Cập nhật thông tin bài viết | CMC Admin</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://admin.cmc.paditech.com/css/prism.css">
+    <!-- Ionicons -->
+<!--
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/ionicons/css/ionicons.min.css">
+-->
+    <!-- Theme style -->
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/dist/css/AdminLTE.min.css?v=3.1">
+    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect. -->
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/dist/css/skins/skin-blue.min.css">
+
+
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/plugins/iCheck/line/blue.css">
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/plugins/iCheck/all.css">
+
+
+    <!--bootstrap tab-->
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/tag/bootstrap-tagsinput.css">
+    <!--edit css-->
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/css/style.css?v=1.0.3">
+
+    <!-- Include Date Range Picker -->
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/plugins/daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/plugins/datatables/dataTables.bootstrap.css">
+
+    <!-- css viewbox -->
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/plugins/viewbox/viewbox.css">
+
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/dist/css/bootstrap-datetimepicker.min.css" />
+    
+    <link href="http://admin.cmc.paditech.com/admin-lte/plugins/select2/select2.css?v=1" rel="stylesheet" />
+    <link href="http://admin.cmc.paditech.com/admin-lte/plugins/waitMe/waitMe.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/dist/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="http://admin.cmc.paditech.com/css/loading.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/css/bootstrapValidator.css">
+
+    
+    <link rel="stylesheet" type="text/css" href="http://admin.cmc.paditech.com/admin-lte/plugins/fancybox/dist/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" type="text/css" href="http://admin.cmc.paditech.com/css/prism.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <meta name="csrf-token" content="3AgixiQlTIwqQPLDP5bFs469CMBTxdQ17vuJF4lT" />
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/css/jobs_cates.css">
+    <link rel="stylesheet" href="http://admin.cmc.paditech.com/admin-lte/css/style_v2.css">
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+<style>
+    .dataTables_empty{display:none}
+</style>
+<a href="http://admin.cmc.paditech.com/admin" class="logo">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini"><b>W</b>U</span>
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-lg"><b>CMC Admin</b></span>
+</a>
+
+<!-- Header Navbar -->
+<nav class="navbar navbar-static-top" role="navigation">
+    <!-- Sidebar toggle button-->
+    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+    </a>
+    <!-- Navbar Right Menu -->
+    <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+
+            <!-- User Account Menu -->
+            <li class="dropdown user user-menu">
+                <!-- Menu Toggle Button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <!-- The user image in the navbar-->
+                                        <img src="/img/user/screenshot_1.png" class="user-image" >
+                    <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                    <span class="hidden-xs">admin</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <!-- The user image in the menu -->
+                    <li class="user-header">
+                                                <img src="/img/user/screenshot_1.png" class="img-circle" alt="User Image">
+
+                        <p>
+                            khoinx@paditech.org
+                            <small>Gia nhập từ 07/2017</small>
+                        </p>
+                                            </li>
+                    <!-- Menu Footer-->
+                    <li class="user-footer">
+                        <div class="pull-left">
+                            <a href="http://admin.cmc.paditech.com/admin/user/1/change_information" class="btn btn-default btn-flat">Đổi thông tin cá nhân</a>
+                        </div>
+                        <div class="pull-right">
+                            <a href="http://admin.cmc.paditech.com/admin/logout" class="btn btn-default btn-flat">Đăng xuất</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+        </header>
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+<section class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel">
+        <div class="pull-left image">
+                        <img src="/img/user/screenshot_1.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+            <p>Admin CMC Admin</p>
+            <!-- Status -->
+            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+    </div>
+    <ul class="sidebar-menu" data-widget="tree">
+                                                                                <li class="">
+                        <a href="http://admin.cmc.paditech.com/admin/dashboard"><i class="fa fa-dashboard"></i> <span>Bảng điều khiển</span></a>
+                    </li>
+                                                                                                    <li class="  treeview ">
+                        <a href="http://admin.cmc.paditech.com/admin/user">
+                            <i class="fa fa-user"></i> <span>Quản lý người dùng</span>
+                                                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                                                    </a>
+                                                <ul class="treeview-menu">
+                            <li class=""><a href="http://admin.cmc.paditech.com/admin/user">Người dùng</a></li><li class=""><a href="http://admin.cmc.paditech.com/admin/role">Quản lý quyền</a></li><li class=""><a href="http://admin.cmc.paditech.com/admin/group">Quản lý nhóm người dùng</a></li>
+                        </ul>
+                                            </li>
+                                                                                                                                                                    <li class="  treeview ">
+                        <a href="#">
+                            <i class="fa fa-newspaper-o"></i> <span>Quản lý tin tức</span>
+                                                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                                                    </a>
+                                                <ul class="treeview-menu">
+                            <li class=""><a href="http://admin.cmc.paditech.com/news/news_category">Danh mục tin tức</a></li><li class=""><a href="http://admin.cmc.paditech.com/news/news_post">Danh sách tin tức</a></li><li class=""><a href="http://admin.cmc.paditech.com/news/resource">Quản lý media</a></li><li class=""><a href="http://admin.cmc.paditech.com/news/comment">Danh sách bình luận</a></li>
+                        </ul>
+                                            </li>
+                                        
+    </ul>
+    <!-- /.sidebar-menu -->
+</section>
+<!-- /.sidebar -->        </aside>
+        <div class="content-wrapper">
+                        <style>
+    /*=== SEO ===*/
+    .seo {
+        margin-top: 30px;
+    }
+    #seo, #read {
+        border: 1px solid #ddd;
+        padding: 15px;
+        font-family: arial;
+        background: #fdfdfd;
+    }
+    .seo_main > ul {
+        border-bottom-color: #fff;
+        margin-bottom: -1px;
+    }
+    .seo_main > ul li a {
+        border: 1px solid #ddd;
+        border-radius: 0;
+        margin-right: 5px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: #333;
+    }
+    .seo_main > ul li a:hover {
+        color: #00a0d2;
+        background: none;
+        border-color:  #ddd;
+    }
+    .seo_main > ul li a:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: #888;
+        display: block;
+        border-radius: 100%;
+        margin-right: 10px;
+    }
+    .seo_main > ul li:first-child a:before {
+        background: #dc3232
+    }
+    .seo_main > ul li:first-child a{
+        color: #0073aa;
+    }
+    .seo_main > ul li:last-child a {
+        font-style: italic;
+    }
+    h3.snippet_title, .snippet_main_title {
+        margin: 0 0 15px 0;
+        font-size: 15px;
+        font-family:  arial;
+    }
+    .snippet {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+        padding: 15px;
+        background: #fff;
+    }
+    .snippet_main {
+        box-shadow:  0 1px 2px rgba(0, 0, 0, .2);
+    }
+    .snippet_support {
+        display:  none;
+    }
+    h3.snippet_main_title {
+        color:  #1e0fbe;
+        font-size:  18px;
+        margin-bottom:  10px;
+        padding: 15px 15px 0;
+    }
+    .snippet_main_slug {
+        padding: 0 15px 15px;
+        color:  #006621;
+    }
+    .snippet_main_description {
+        border-top: 1px solid #dfe1e5;
+        padding: 15px;
+    }
+    .snippet_action {
+        display:  flex;
+        align-items:  center;
+        margin: 20px 0 0;
+    }
+    .snippet_action > div {
+        background:  #f7f7f7;
+        border:  1px solid #dbdbdb;
+        border-radius:  3px;
+        display:  flex;
+        align-items:  center;
+        overflow:  hidden;
+        cursor:  pointer;
+    }
+    .snippet_action_device > span {
+        font-size: 19px;
+        width: 34px;
+        display: inline-flex;
+        height: 34px;
+        position:  relative;
+        align-items:  center;
+        justify-content:  center;
+        cursor:  pointer;
+    }
+    .snippet_action_device > span:hover:after{
+        opacity: 1;
+        visibility: visible;
+        background: #1e8cbe;
+    }
+    .snippet_action_device > span:hover{
+        color: #1e8cbe;
+    }
+    .snippet_action_device > span.active:hover{
+        color: #333;
+    }
+    .snippet_action_device > span.active:hover:after{
+        background: #333;
+    }
+    .snippet_action_device > span:first-child {
+        font-size: 24px;
+    }
+    .snippet_action_edit i {
+        font-size: 19px;
+        margin-right: 10px;
+    }
+    .snippet_action_edit {
+        height: 36px;
+        display:  flex;
+        align-items:  center;
+        padding:  0 10px;
+        margin-left: 5px;
+    }
+    .snippet_action_device > span:after {
+        content:  "";
+        width:  100%;
+        height:  3px;
+        background:  #333;
+        position:  absolute;
+        bottom:  0;
+        left:  0;
+        opacity:  0;
+        visibility:  hidden;
+        transition:  all ease .3s;
+    }
+    .snippet_action_device > span.active:after {
+        opacity:  1;
+        visibility:  visible;
+    }
+    .snippet_config{
+        display: none;
+    }
+    h3.snippet_config_item_title {
+        font-size:  16px;
+        font-family: arial;
+    }
+    span.snippet_config_item_bar {
+        display:  block;
+        height: 8px;
+        width:  100%;
+        margin-top: 10px;
+        position:  relative;
+    }
+    span.snippet_config_item_bar:before {
+        content:  "";
+        height:  100%;
+        position:  absolute;
+        left:  0;
+    }
+    .snippet_config_close {
+        display:  inline-block;
+        border:  1px solid #dbdbdb;
+        border-radius:  3px;
+        margin-top:  20px;
+        background:  #f7f7f7;
+        padding: 10px;
+        cursor:  pointer;
+    }
+    .focus_key, .analysis {
+        background:  #fff;
+        padding:  15px;
+        margin-top:  20px;
+        box-shadow:  0 1px 2px rgba(0, 0, 0, .2);
+    }
+    h3.focus_key_title, .analysis_title {
+        font-family:  arial;
+        font-size: 16px;
+    }
+    .focus_key > input {
+        margin: 25px 0;
+    }
+    .focus_key > div:last-child{
+        margin-left: 10px;
+        display: inline-block;
+    }
+    .focus_key > div:last-child span{
+        color: #0073aa;
+        text-decoration: underline;
+    }
+    h4.analysis_box_title {
+        font-family:  arial;
+        font-size:  14px;
+        color: #0066cd;
+        margin: 0 0 10px;
+    }
+    .analysis_box_main {
+        font-size:  14px;
+    }
+    .analysis_box {
+        margin-top: 30px;
+    }
+    .analysis_box_item {
+        position:  relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .analysis_box_item:before {
+        content:  "";
+        width:  10px;
+        height:  10px;
+        position: absolute;
+        border-radius:  100%;
+        left:  0;
+        top: 6px;
+    }
+    #error .analysis_box_item:before {
+        background: #dc3232;
+    }
+    #improve .analysis_box_item:before {
+        background: #ee7c1b;
+    }
+    #good .analysis_box_item:before {
+        background: #7ad03a;
+    }
+    h3.analysis_title {
+        margin: 0;
+    }
+    .snippet_main.pc .snippet_main_description {
+        border:  none;
+        padding: 0;
+    }
+    .snippet_main.pc .snippet_main_title {
+        margin-bottom:  5px;
+        padding: 10px 0 0;
+    }
+    .snippet_main.pc .snippet_main_slug {
+        padding: 0 0 5px;
+    }
+    .snippet_main.pc {
+        box-shadow:  none;
+    }
+    /*=== End SEO ===*/
+</style>
+    <section class="content-header">
+        <h1>
+            Cập nhật thông tin bài viết
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+            <li><a href="http://admin.cmc.paditech.com/news/news_post"> Danh sách bài viết</a></li>
+            <li class="active">Cập nhật</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="box box-primary">
+            <form method="POST" action="http://admin.cmc.paditech.com/news/news_post/update/337" accept-charset="UTF-8" id="form-edit-post" class="validate" enctype="multipart/form-data"><input name="_token" type="hidden" value="3AgixiQlTIwqQPLDP5bFs469CMBTxdQ17vuJF4lT">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Cập nhật thông tin bài viết</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                                            <div class="row">
+                            <div class="col-md-8">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                                            <li class="nav-item  active ">
+                                            <a class="nav-link" id="vi-tab" data-toggle="tab" href="#vi" role="tab" aria-controls="home" aria-selected="true">Tiếng Việt</a>
+                                        </li>
+                                                                            <li class="nav-item ">
+                                            <a class="nav-link" id="en-tab" data-toggle="tab" href="#en" role="tab" aria-controls="home" aria-selected="true">Tiếng Anh</a>
+                                        </li>
+                                                                            <li class="nav-item ">
+                                            <a class="nav-link" id="cn-tab" data-toggle="tab" href="#cn" role="tab" aria-controls="home" aria-selected="true">Tiếng Trung</a>
+                                        </li>
+                                                                            <li class="nav-item ">
+                                            <a class="nav-link" id="jp-tab" data-toggle="tab" href="#jp" role="tab" aria-controls="home" aria-selected="true">Tiếng Nhật</a>
+                                        </li>
+                                                                    </ul>
+                                <div class="tab-content" id="myTabContent">
+                                                                            <div class="tab-pane fade  in active " id="vi" role="tabpanel" aria-labelledby="vi-tab">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Tiêu đề <span class="text-uppercase">(vi)</span> (*)</label>
+                                                <input id="title_vi" name="title_vi" required type="text" value="Năng lực hỗ trợ từ quỹ sáng tạo" class="form-control" placeholder="Nhập tiêu đề bài viết"  onchange="changeInput(this.value) ">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Mô tả <span class="text-uppercase">(vi)</span></label>
+                                                <textarea name="summary_vi" class="form-control" placeholder="Nhập mô tả bài viết">Năng lực hỗ trợ từ quỹ sáng tạo</textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label id="exampleInputEmail1" class="data_label" for="exampleInputEmail1">Nội dung (*)</label>
+                                                <input id="post-data-vi" name='data_vi' class="form-control" value='&lt;p class=&quot;rtejustify&quot;&gt;&lt;strong&gt;Đội&lt;/strong&gt;&lt;strong&gt;&nbsp;ngũ chuy&ecirc;n gia:&nbsp;&lt;/strong&gt;L&agrave; tập đo&agrave;n c&ocirc;ng nghệ h&agrave;ng đầu hoạt động trong lĩnh vực c&ocirc;ng nghệ th&ocirc;ng tin v&agrave; viễn th&ocirc;ng, ch&uacute;ng t&ocirc;i c&oacute; đội ngũ chuy&ecirc;n gia c&oacute; bề d&agrave;y&nbsp;kinh nghiệm từ c&ocirc;ng nghệ, thị trường, quản trị, t&agrave;i ch&iacute;nh&hellip; sẽ trợ&nbsp;gi&uacute;p t&iacute;ch cực trong qu&aacute; tr&igrave;nh ho&agrave;n thiện v&agrave; triển khai th&agrave;nh c&ocirc;ng c&aacute;c dự &aacute;n đầu tư.&nbsp;&lt;/p&gt;&lt;p class=&quot;rtecenter&quot;&gt;&lt;img src=&quot;https://cmc.com.vn/sites/default/files/manl0728-edit.jpg&quot; alt=&quot;manl0728-edit.jpg&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hạ tầng kỹ thuật:&nbsp;&lt;/strong&gt;Ch&uacute;ng t&ocirc;i cung cấp c&aacute;c hạ tầng kỹ thuật cần thiết trong qu&aacute; tr&igrave;nh nghi&ecirc;n cứu v&agrave; ph&aacute;t triển dự &aacute;n như m&ocirc;i trường l&agrave;m việc l&yacute; tưởng tại trung t&acirc;m s&aacute;ng tạo, hệ thống ph&ograve;ng th&iacute; nghiệm (Lab) ti&ecirc;u chuẩn, hạ tầng dữ li&ecirc;u tại Trung t&acirc;m dữ liệu&nbsp;(IDC), đường truyền tốc độ cao&hellip; Ngo&agrave;i ra với&nbsp;nguồn lực lớn đội&nbsp;ngũ lập tr&igrave;nh vi&ecirc;n, ch&uacute;ng t&ocirc;i c&oacute; thể hỗ trợ ph&aacute;t triển sản phẩm cho dự &aacute;n.&nbsp;&nbsp;&lt;/p&gt;&lt;p class=&quot;rtecenter&quot;&gt;&lt;img src=&quot;https://cmc.com.vn/sites/default/files/manl1274-edit.jpg&quot; alt=&quot;manl1274-edit.jpg&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hệ thống kh&aacute;ch h&agrave;ng v&agrave; đối t&aacute;c c&ocirc;ng nghệ:&lt;/strong&gt;&lt;/p&gt;&lt;p class=&quot;rtecenter&quot;&gt;&lt;img src=&quot;https://cmc.com.vn/sites/default/files/poster_info_phe_duyet-02.png&quot; alt=&quot;poster_info_phe_duyet-02.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;Với hệ thống&nbsp;kh&aacute;ch h&agrave;ng tổ chức trong nước v&agrave; quốc tế hoạt động trong c&aacute;c lĩnh vực từ t&agrave;i ch&iacute;nh ng&acirc;n h&agrave;ng, c&aacute;c doanh nghiệp sản xuất v&agrave; dịch vụ, c&aacute;c doanh nghiệp viễn th&ocirc;ng, c&aacute;c tổ chức dịch vụ c&ocirc;ng&hellip;. Ch&uacute;ng t&ocirc;i hỗ trợ dự &aacute;n trong vi&ecirc;c kết nối t&igrave;m hiểu nhu cầu kh&aacute;ch h&agrave;ng v&agrave; c&oacute; thể đưa sản phẩm, giải ph&aacute;p dịch vụ đến kh&aacute;ch h&agrave;ng nhanh nhất. Ngo&agrave;i ra ch&uacute;ng&nbsp;t&ocirc;i c&oacute; c&aacute;c đối t&aacute;c c&ocirc;ng nghệ lớn như Microsoft, IBM, Cisco, SAP, Oracle, InfoSys, HP&hellip;. c&oacute; thể trợ gi&uacute;p cho c&aacute;c dự &aacute;n trong qu&aacute; tr&igrave;nh ph&aacute;t triển.&lt;/p&gt;&lt;p&gt;&nbsp;&lt;/p&gt;'>
+                                            </div>
+                                        </div>
+                                                                            <div class="tab-pane fade " id="en" role="tabpanel" aria-labelledby="en-tab">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Tiêu đề <span class="text-uppercase">(en)</span> (*)</label>
+                                                <input id="title_en" name="title_en" required type="text" value="bbbbbbbbbbbbbb" class="form-control" placeholder="Nhập tiêu đề bài viết" ">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Mô tả <span class="text-uppercase">(en)</span></label>
+                                                <textarea name="summary_en" class="form-control" placeholder="Nhập mô tả bài viết"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label id="exampleInputEmail1" class="data_label" for="exampleInputEmail1">Nội dung (*)</label>
+                                                <input id="post-data-en" name='data_en' class="form-control" value='&lt;p&gt;bbbbbbbbbbbbbbbbb&lt;/p&gt;'>
+                                            </div>
+                                        </div>
+                                                                            <div class="tab-pane fade " id="cn" role="tabpanel" aria-labelledby="cn-tab">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Tiêu đề <span class="text-uppercase">(cn)</span> (*)</label>
+                                                <input id="title_cn" name="title_cn" required type="text" value="bbbbbbbbbbbbbbbbbbb" class="form-control" placeholder="Nhập tiêu đề bài viết" ">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Mô tả <span class="text-uppercase">(cn)</span></label>
+                                                <textarea name="summary_cn" class="form-control" placeholder="Nhập mô tả bài viết"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label id="exampleInputEmail1" class="data_label" for="exampleInputEmail1">Nội dung (*)</label>
+                                                <input id="post-data-cn" name='data_cn' class="form-control" value='&lt;p&gt;bbbbbbbbbbbbbbbb&lt;/p&gt;'>
+                                            </div>
+                                        </div>
+                                                                            <div class="tab-pane fade " id="jp" role="tabpanel" aria-labelledby="jp-tab">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Tiêu đề <span class="text-uppercase">(jp)</span> (*)</label>
+                                                <input id="title_jp" name="title_jp" required type="text" value="bbbbbbbbbbbbbbbbb" class="form-control" placeholder="Nhập tiêu đề bài viết" ">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Mô tả <span class="text-uppercase">(jp)</span></label>
+                                                <textarea name="summary_jp" class="form-control" placeholder="Nhập mô tả bài viết"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label id="exampleInputEmail1" class="data_label" for="exampleInputEmail1">Nội dung (*)</label>
+                                                <input id="post-data-jp" name='data_jp' class="form-control" value='&lt;p&gt;bbbbbbbbbbbbbbbbbb&lt;/p&gt;'>
+                                            </div>
+                                        </div>
+                                                                    </div>
+
+                                <div class="clearfix"></div>
+                                <div class="seo" style="">
+                                    <h3 class="seo_title">Hỗ trợ SEO</h3>
+                                    <div class="seo_main">
+                                        <ul class="nav nav-tabs">
+                                            <li><a data-toggle="tab" href="#read">Tiếp cận độc giả</a></li>
+                                            <li class="active"><a data-toggle="tab" href="#seo">Thông tin Seo</a></li>
+                                        </ul>
+
+                                        <div class="tab-content">
+                                            <div id="read" class="tab-pane fade">
+                                                <h3>Trang chủ</h3>
+                                                <div class="analysis">
+                                                    <h3 class="analysis_title"><i class="fa fa-list"></i> Phân tích</h3>
+                                                    <div class="analysis_content">
+                                                        <div class="analysis_box" id="error">
+                                                            <h4 class="analysis_box_title">Vấn đề (<span id="problem_num">3</span>)</h4>
+                                                            <div id="problemMsg" class="analysis_box_main"><div class="analysis_box_item">Đoạn văn đáp ứng được tiêu chí chứa các thẻ subheadings (thẻ tiêu đề H1, H2, H3, H4, H5, H6), mỗi thẻ subheading cách nhau 1 đoạn text không quá 300 từ</div><div class="analysis_box_item">Mỗi đoạn văn bản không dài quá 150 từ</div><div class="analysis_box_item">Số câu chứa hơn 20 từ không vượt quá 25% nội dung bài viết</div></div>
+                                                        </div>
+
+                                                        <div class="analysis_box" id="improve">
+                                                            <h4 class="analysis_box_title">Khắc phục (<span id="improve_num">0</span>)</h4>
+                                                            <div id="improveMsg" class="analysis_box_main"></div>
+                                                        </div>
+
+                                                        <div class="analysis_box" id="good">
+                                                            <h4 class="analysis_box_title">Thành tích (<span id="good_num">0</span>)</h4>
+                                                            <div id="goodMsg" class="analysis_box_main"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="seo" class="tab-pane fade in active">
+                                                <div class="snippet">
+                                                    <h3 class="snippet_title"><i class="fa fa-eye"></i> Hiển thị</h3>
+                                                    <div class="snippet_support">This is a rendering of what this post might look like in Google's search resul.</div>
+                                                    <div class="snippet_main mobile">
+                                                        <h3 class="snippet_main_title">Năng lực hỗ trợ từ quỹ sáng tạo</h3>
+                                                        <div class="snippet_main_slug">nang-luc-ho-tro-tu-quy-sang-tao</div>
+                                                        <div class="snippet_main_description">Meta description</div>
+                                                    </div>
+
+                                                    <div class="snippet_action">
+                                                        <div class="snippet_action_device">
+                                                            <span class="active snippet_action_device_item mobile"><i class="fa fa-mobile"></i></span>
+                                                            <span class="snippet_action_device_item pc"><i class="fa fa-desktop"></i></span>
+                                                        </div>
+                                                        <div class="snippet_action_edit">
+                                                            <i class="fa fa-pencil"></i> Cập nhật SEO
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="snippet_config">
+                                                        <div class="titlebar snippet_config_item">
+                                                            <h3 class="snippet_config_item_title">Tiêu đề SEO</h3>
+                                                            <input id="seotitle" type="text" class="form-control" readonly="true">
+                                                            <span class="snippet_config_item_bar"></span>
+                                                        </div>
+
+                                                        <div class="snippet_config_item">
+                                                            <h3 class="snippet_config_item_title">Slug</h3>
+                                                            <input id="slug_text" type="text" class="form-control" value="nang-luc-ho-tro-tu-quy-sang-tao" readonly="true">
+                                                        </div>
+
+                                                        <div class="meta snippet_config_item">
+                                                            <h3 class="snippet_config_item_title">Meta description</h3>
+                                                            <textarea class="form-control" name="meta_description" id="meta_description" rows="10">Meta description</textarea>
+                                                            <span class="snippet_config_item_bar"></span>
+                                                        </div>
+
+                                                        <div class="snippet_config_close">Đóng</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="focus_key">
+                                                    <h3 class="focus_key_title"><i class="fa fa-key"></i> Từ khóa SEO</h3>
+                                                    <input type="hidden" name="_token" value="3AgixiQlTIwqQPLDP5bFs469CMBTxdQ17vuJF4lT">
+                                                    <input id="focus_keyword" name="focus_keyword" data-token='3AgixiQlTIwqQPLDP5bFs469CMBTxdQ17vuJF4lT' data-url="http://admin.cmc.paditech.com/news/news_post/checkExistkey" type="text" class="form-control" value="">
+                                                    <input type="hidden" id="cornerstone_value" name="cornerstone_value" value="0">
+                                                    <input id="cornerstone" name="cornerstone" type="checkbox" value=""> <div>Bài viết <span>trọng tâm</span></div>
+                                                </div>
+
+                                                <div id="seoDiv" class="analysis">
+                                                    <h3 class="analysis_title"><i class="fa fa-list"></i> Phân tích</h3>
+                                                    <div class="analysis_content">
+                                                        <div class="analysis_box" id="error">
+                                                            <h4 class="analysis_box_title">Vấn đề (<span id="problem_num">10</span>)</h4>
+                                                            <div id="problemMsg" class="analysis_box_main">
+                                                                <div id="problemMsg1"><div class="analysis_box_item">Đoạn văn đầu tiên trong bài viết phải chứa từ khoá chính</div><div class="analysis_box_item">Tỷ lệ xuất hiện của từ khoá chính trong bài phải chiếm ít nhất 1 - 4%</div><div class="analysis_box_item">Meta description đáp ứng được tiêu chí chứa từ khoá chính</div><div class="analysis_box_item">Meta description đáp ứng được tiêu chí độ dài phù hợp (tối thiểu 120 ký tự, tối đa 156 ký tự)</div><div class="analysis_box_item">Ảnh xuất hiện trong bài viết đều đáp ứng được tiêu chí alt text chứa từ khoá chính (thuộc tính alt trong thẻ img)</div><div class="analysis_box_item">Nội dung bài viết đáp ứng được tiêu chí tối thiểu 300 từ</div><div class="analysis_box_item">Nội dung bài viết đáp ứng được tiêu chí chứa ít nhất 1 link ngoại tuyến</div><div class="analysis_box_item">Nội dung bài viết đáp ứng được tiêu chí chứa ít nhất 1 link nội tuyến (link đến trang chủ)</div><div class="analysis_box_item">Seo Title có độ dài phù hợp, tối thiểu 40 ký tự, tối đa 70 ký tự</div><div class="analysis_box_item">URL phải chứa từ khoá chính (add vào slug)</div></div>
+                                                                <div id="problemMsg2"><div class="analysis_box_item">Từ khoá chính đáp ứng được tiêu chí và là độc nhất, chưa được dùng làm từ khoá chính bao giờ</div></div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="analysis_box" id="improve">
+                                                            <h4 class="analysis_box_title">Khắc phục (<span id="improve_num">0</span>)</h4>
+                                                            <div id="improveMsg" class="analysis_box_main">
+                                                                <div id="improveMsg1"></div>
+                                                                <div id="improveMsg2"></div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="analysis_box" id="good">
+                                                            <h4 class="analysis_box_title">Thành tích (<span id="good_num">0</span>)</h4>
+                                                            <div id="goodMsg" class="analysis_box_main">
+                                                                <div id="goodMsg1"></div>
+                                                                <div id="goodMsg2"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Loại bài viết (*)</label>
+                                    <select name="post_type" class="form-control" onchange="return post.changeType(this);">
+                                        <option value="news" selected>Tin tức</option>
+                                        <!--<option value="image" >Tin ảnh</option>-->
+                                        <option value="video" >Tin video</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Danh mục tin (*)   <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="You just only choose level 3 category!"></i></label>
+                                    <div class="list-categories" style="height: 250px; overflow-y: scroll">
+                                        <div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='29' />    Founding Fund</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='13' />    News</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='21' />    Product & Services</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='9' />    Quỹ Sáng Tạo CMC</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='58' checked />    Quỹ Sáng Tạo CMC ( Miền Nam)</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='46' />    Quỹ Sáng Tạo CMC ( Miền Trung)</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='5' />    Sản phẩm & Dịch Vụ</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='54' />    Sản phẩm & Dịch vụ ( Miền Nam)</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='42' />    Sản phẩm & Dịch vụ ( Miền Trung)</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='1' />    Tin tức</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='50' />    Tin tức ( Miền Nam)</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='38' />    Tin tức ( Miền Trung)</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='33' />    クリエイティブクォーター</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='17' />    ニュース</label></div><div class='checkbox' style='padding-left:0px'><label><input type='checkbox'  name='category[]' value='25' />    製品とサービス</label></div>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="form-group hidden">
+                                    <label for="exampleInputEmail1">Tags</label><br>
+                                    <input type="text" value="                                    " name="tags" data-role="tagsinput" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ảnh đại diện</label>
+                                    <input type="file" name="thumbnail" accept="image/*" class="form-control preview-upload-image"/>
+                                    <img  src="http://admin.cmc.paditech.com/img/posts/thumbnail_mn1.jpg"   class="preview-feature-image preview-image"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ngày tạo (mặc định là ngày hiện tại)</label>
+                                    <div class='input-group date'>
+                                        <input type='text' class="form-control" name="created_fake" id="datetimepicker1" value="06-06-2019 11:28" />
+                                        <label class="input-group-addon btn" for="date">
+                                            <span class="fa fa-calendar open-datetimepicker"></span>
+                                        </label>
+                                    </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Trạng thái</label>
+                                    <select name="post_status" class="form-control">
+                                        <option value="0" >Nháp</option>
+                                        <option value="1" selected>Xuất bản</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Tình trạng</label>
+                                    <select name="feature_status" class="form-control">
+                                        <option value="0" selected>Bình thường</option>
+                                        <option value="1" >Nổi bật</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- /.row -->
+                </div>
+                <div class="box-footer">
+                    <div class="row">
+                        <input type="hidden" name="_token" value="3AgixiQlTIwqQPLDP5bFs469CMBTxdQ17vuJF4lT">
+                        <div class="col-md-6 text-right"><button type="submit" class="btn btn-primary">Cập nhật</button></div>
+                        <div class="col-md-6 text-left"><a id="btnBack" href="http://admin.cmc.paditech.com/news/news_post" class="btn btn-default">Hủy</a></div>
+                    </div>
+                </div>
+
+            <input class="id" name="id" value="337" style="display:none" >
+
+            </form>
+        </div>
+        <!-- Modal add Category -->
+        <div id="addCat" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div id="alert-cat-add"></div>
+        <!-- Modal content-->
+        <form class="form-horizontal" id="form-add-cat">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Thêm danh mục</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Tên danh mục (*)</label>
+                        <div class="col-sm-10">
+                            <input name="name"  type="text" value="" class="form-control" placeholder="Nhập vào tên danh mục" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Tên trên URL (*)</label>
+                        <div class="col-sm-10">
+                            <input name="slug" id="prefix" type="text" value="" class="form-control slug" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Danh muc cha (*)</label>
+                        <div class="col-sm-10">
+                            <select id="parent_cat" name="parent_id" class="form-control" required>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Ảnh cover</label>
+                        <div class="col-sm-10">
+                            <input name="cover" value="" type="text" class="form-control" placeholder="Nhập vào link ảnh cover">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Mô tả</label>
+                        <div class="col-sm-10">
+                            <textarea name="summary" class="form-control" placeholder="Nhập vào mô tả"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Vị trí</label>
+                        <div class="col-sm-10">
+                            <input name="position" type="number" value="0" class="form-control" placeholder="Nhập vào thứ tự hiển thị">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" name="_token" value="3AgixiQlTIwqQPLDP5bFs469CMBTxdQ17vuJF4lT">
+                    <button type="submit" class="btn btn-success">Thêm mới</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>    </section>
+        </div>
+        <footer class="main-footer">
+            <!-- To the right -->
+<div class="pull-right hidden-xs">
+</div>
+<!-- Default to the left -->
+<strong>Copyright &copy; 2018 <a href="#">CMC Admin</a>.</strong>        </footer>
+        <aside class="control-sidebar control-sidebar-dark">
+
+        </aside>
+    </div>
+
+    <div aria-hidden="false" aria-labelledby="mySmallModalLabel" role="dialog" class="modal fade in" id="detailModal" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h4 id="finishModalLabel" class="modal-title"></h4>
+                </div>
+                <div id='modal_content' class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="print_data" style="display: none"></div>
+
+    <div id="f_loading_message" style="display: none;" class="loadingView">
+        <p>
+            <b>
+                <b>
+                    <b>
+                        <img alt="loading" class="loadingv2" src="http://admin.cmc.paditech.com/img/loading_blue.gif">
+                        <span id="f_loading_title">đang tải...</span>&nbsp;&nbsp;&nbsp;
+                        <a old="#" href="#" onclick="return dialog.hide();" class="canc">đóng</a>
+                    </b>
+                </b>
+            </b>
+        </p>
+    </div>
+
+    <!-- jQuery 3 -->
+    <script src="http://admin.cmc.paditech.com/admin-lte/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="http://admin.cmc.paditech.com/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/jqueryValidation/jquery.validate.min.js"></script>
+    <script src="http://admin.cmc.paditech.com/js/notify.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    
+
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+
+
+    <script src="http://admin.cmc.paditech.com/js/prism.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/fancybox/dist/jquery.fancybox.min.js"></script>
+
+    <!--Icheck-->
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/iCheck/icheck.min.js"></script>
+    <!--bootstrap tab-->
+    <script src="http://admin.cmc.paditech.com/admin-lte/tag/bootstrap-tagsinput.js"></script>
+    <!-- Select 2 -->
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/select2/select2.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/dist/js/moment-with-locales.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/datepicker/bootstrap-datepicker.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/dist/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- Include Date Range Picker -->
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/waitMe/waitMe.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/dist/js/adminlte.min.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/dist/js/custom.js?v=1"></script>
+    <script src="http://admin.cmc.paditech.com/js/init.js?v=2"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/viewbox/jquery.viewbox.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/gdoc/jquery.gdocsviewer.min.js"></script>
+    <!--chart js-->
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/chartjs/Chart.min.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/flot/jquery.flot.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/flot/jquery.flot.categories.js"></script>
+    <script src="http://admin.cmc.paditech.com/js/googlemap.js" type="text/javascript"></script>
+    <script>
+    
+    </script>
+        <script src="http://admin.cmc.paditech.com/admin-lte/plugins/tinymce/tinymce.min.js"></script>
+    <script src="http://admin.cmc.paditech.com/js/tinymceConfig.js"></script>
+    <script src="http://admin.cmc.paditech.com/admin-lte/plugins/iCheck/icheck.min.js"></script>
+    <script src="http://admin.cmc.paditech.com/js/news_posts.js?v=1"></script>
+
+    <script>
+        $(document).ready(function () {
+            if($('#cornerstone_value').val() == 1){
+                $('#cornerstone').iCheck('check');
+            }
+            $('#load-cat-parent').click(function () {
+                $.ajax({
+                    url : 'http://admin.cmc.paditech.com/news/news_category/create?action=get',
+                    type: 'GET',
+                    success: function (data) {
+                        $.each(data, function( index, val ) {
+                            $('#parent_cat').append('<option value="'+val.id+'">'+val.prefix+val.name+'</option>');
+                        });
+                    }
+                });
+            })
+            $('#form-add-cat').submit(function () {
+                var data = $(this).serialize();
+                $.ajax({
+                    url : 'http://admin.cmc.paditech.com/news/news_category',
+                    type: 'POST',
+                    data: data,
+                    success : function (data) {
+                        $('.list-categories').append('<div class="checkbox">'+
+                            '<label> <input type="checkbox" name="category[]" value="'+data.id+'"/>'+data.name +'</label></div>');
+                        $('#addCat').modal('hide');
+                    },
+                    error: function (data) {
+                        if(data.responseText.name != ''){
+                            $('#alert-cat-add').append('<div class="alert alert-danger" >Vui lòng nhập vào tên</div>')
+                        }else {
+                            $('#alert-cat-add').append('<div class="alert alert-danger" >Có lỗi xảy ra vui lòng thử lại</div>')
+                        }
+                    }
+                })
+                return false;
+            });
+            $('#form-edit-post').bind("keypress", function(e) {
+                if (e.keyCode == 13) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $('.input-group-addon').click(function () {
+                $('#datetimepicker1').datetimepicker({
+                    format :"DD-MM-YYYY"
+                });
+            })
+        })
+
+
+    </script>
+<script>
+            $(document).ready(function(){
+    $('.snippet_action_edit').click(function(){
+    $('.snippet_config').slideToggle();
+    });
+    $('.snippet_action_device_item').each(function(){
+    $(this).click(function(){
+    $(this).parent().children().removeClass('active');
+    $(this).addClass('active');
+    });
+    });
+    $('.mobile').click(function(){
+    $('.snippet_main').addClass('mobile');
+    $('.snippet_main').removeClass('pc');
+    var text = $('.snippet_main_slug').text();
+    text = text.replace("/", " > ");
+    $('.snippet_main_slug').text(text);
+    });
+    $('.pc').click(function(){
+    $('.snippet_main').addClass('pc');
+    $('.snippet_main').removeClass('mobile');
+    var text = $('.snippet_main_slug').text();
+    text = text.replace(" > ", "/");
+    $('.snippet_main_slug').text(text);
+    });
+    });
+</script>
+
+
+
+    <!-- Optionally, you can add Slimscroll and FastClick plugins.
+         Both of these plugins are recommended to enhance the
+         user experience. -->
+</body>
+</html>

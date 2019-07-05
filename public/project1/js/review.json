@@ -1,0 +1,18 @@
+{
+  "review": [
+    {
+      "id": 1,
+      "email_reviewer": "",
+      "needreply": "",
+      "reviewtext": "",
+      "product_reviewer": ""
+    },
+    {
+      "email_reviewer": "mrtienthinh@mail.com",
+      "needreply": "true",
+      "reviewtext": "asdf",
+      "product_reviewer": "Chicken Hawaii",
+      "id": 2
+    }
+  ]
+}
